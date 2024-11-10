@@ -57,4 +57,11 @@ class TestHttpBinAPI(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+=====================================================
+import requests
+url = "https://httpbin.org/post"
+payload = {"name": "praveen", "add": "pattar"}
+responce = requests.post(url, data=payload)
+with open("output1.txt", "w") as file:
+    file.write(responce.text)
 
